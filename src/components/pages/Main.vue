@@ -16,20 +16,20 @@
       <h2>ALGUNS SERVIÇOS NOSSOS</h2>
       <div>
         <router-link to="/martelinho" class="info-img">
-          <h4>Martelinho de Ouro</h4>
-          <img src="../../assets/img/martelinho-de-ouro.png" alt="Martelinho de Ouro" />
+          <h4 @click="backTop(), toogleMenu()">Martelinho de Ouro</h4>
+          <img @click="backTop(), toogleMenu()" src="../../assets/img/martelinho-de-ouro.png" alt="Martelinho de Ouro" />
         </router-link>
         <router-link to="/polimentos" class="info-img">
-          <h4>Polimentos</h4>
-          <img src="../../assets/img/polimento2.jpg" alt="Polimento" />
+          <h4 @click="backTop(), toogleMenu()">Polimentos</h4>
+          <img @click="backTop(), toogleMenu()" src="../../assets/img/polimento2.jpg" alt="Polimento" />
         </router-link>
         <router-link to="/pinturas" class="info-img">
-          <h4>Pinturas</h4>
-          <img src="../../assets/img/pintura.png" alt="Pintura" />
+          <h4 @click="backTop(), toogleMenu()">Pinturas</h4>
+          <img @click="backTop(), toogleMenu()" src="../../assets/img/pintura.png" alt="Pintura" />
         </router-link>
         <router-link to="/retoques" class="info-img">
-          <h4>Retoques</h4>
-          <img src="../../assets/img/retoque.jpg" alt="Retoques" />
+          <h4 @click="backTop(), toogleMenu()">Retoques</h4>
+          <img @click="backTop(), toogleMenu()" src="../../assets/img/retoque.jpg" alt="Retoques" />
         </router-link>
       </div>
     </div>

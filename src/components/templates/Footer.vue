@@ -1,5 +1,5 @@
 <template>
-  <div @click="toogleMenu" class="footer">
+  <div class="footer">
     <div class="footerwidgets">
       <div>
         <h4>Sobre nós</h4>
@@ -16,13 +16,16 @@
           <i class="fa fa-home"></i> INICIO
         </a>
         <router-link to="/contacts">
-          <i class="fa fa-phone"></i> CONTATO
+          <i class="fa fa-phone"></i>
+          <a @click="backTop(), toogleMenu()">CONTATO</a>
         </router-link>
         <router-link to="/services">
-          <i class="fa fa-cogs"></i> SERVIÇOS
+          <i class="fa fa-cogs"></i>
+          <a @click="backTop(), toogleMenu()">SERVIÇOS</a>
         </router-link>
         <router-link to="/info">
-          <i class="fa fa-info-circle"></i> QUEM SOMOS
+          <i class="fa fa-info-circle"></i>
+          <a @click="backTop(), toogleMenu()">QUEM SOMOS</a>
         </router-link>
       </div>
       <div>
@@ -50,11 +53,22 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
   name: "Footer",
   methods: {
     toogleMenu() {
-      this.$store.commit("toogleMenu", false);
+      this.$store.commit("toogleMenu");
+      if(this.$store.state.isMenuVisible) {
+        $('.bar > i').toggleClass('fa-bars')
+        $('.bar > i').toggleClass('fa-times')
+      } else {
+        $('.bar > i').toggleClass('fa-bars')
+        $('.bar > i').toggleClass('fa-times')
+      }
+    },
+    backTop() {
+      $('html, body').animate({scrollTop: 0}, 300);
     }
   }
 };
@@ -100,6 +114,7 @@ export default {
 
 .acess a {
   padding-bottom: 10px;
+  width: 130px;
 }
 
 .acess a:hover {

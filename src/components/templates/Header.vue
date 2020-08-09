@@ -26,16 +26,20 @@
     </aside>
     <div class="menu">
       <router-link to="/">
-        <i class="fa fa-home"></i> HOME
+        <i class="fa fa-home"></i>
+        <a @click="toogleMenu(), backTop()">HOME</a>
       </router-link>
       <router-link to="/services">
-        <i class="fa fa-cogs"></i> SERVIÇOS
+        <i class="fa fa-cogs"></i>
+        <a @click="toogleMenu(), backTop()">SERVIÇOS</a>
       </router-link>
       <router-link to="/contacts">
-        <i class="fa fa-phone"></i> CONTATO
+        <i class="fa fa-phone"></i>
+        <a @click="toogleMenu(), backTop()">CONTATO</a>
       </router-link>
       <router-link to="/info">
-        <i class="fa fa-info-circle"></i> QUEM SOMOS
+        <i class="fa fa-info-circle"></i>
+        <a @click="toogleMenu(), backTop()">QUEM SOMOS</a>
       </router-link>
     </div>
   </div>
@@ -114,10 +118,14 @@ export default {
   color: #fff;
 }
 
-.menu a {
+.menu a{
   text-decoration: none;
   color: #fff;
   margin-right: 50px;
+}
+
+.menu a > i {
+  margin-right: 5px;
 }
 
 .menu a:hover {
